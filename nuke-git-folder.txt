@@ -1,0 +1,1 @@
+﻿Get-ChildItem . ".git" -Directory -Recurse -Hidden | Remove-Item -Verbose -Force
