@@ -11,11 +11,17 @@ class Fooderlich extends StatelessWidget {
   const Fooderlich({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final theme = FooderlichTheme.light();
+    final theme = FooderlichTheme.dark();
     return MaterialApp(
       theme: theme,
       title: 'Fooderlich',
       home: const Home(),
+      builder: (context, child) {
+        return MediaQuery(
+          child: child!,
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        );
+      },
     );
   }
 }
